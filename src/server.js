@@ -6,8 +6,7 @@ const { uploadImage } = require('./upload-file.js');
 const { makeEntry, imageExists, getImages, getImage } = require('./data/data');
 const { processImage, hash } = require('./utils/utils');
 const { sizes } = require('./constants/constants');
-
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const app = express();
 
 app.use(express.json());
