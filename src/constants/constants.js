@@ -14,12 +14,11 @@ const measurements = {
 };
 const sizes = ['horizontal', 'vertical', 'horizontal_small', 'gallery'];
 
-//how do i remove these from here?
-const USERNAME = 'cxqyzdmbsgnzxx';
-const HOST = 'ec2-18-203-7-163.eu-west-1.compute.amazonaws.com';
-const DATABASE = 'd92ch17m0ic12f';
-const PASSWORD = 'd960a0ea5e09081b4d642bfb3164c685cfe10f7516086399f7f61271c280e85e';
-const IMGBB_API_KEY = '5539c5d19987f91976ba274ba6735bd0';
+const USERNAME = process.env.USERNAME;
+const HOST = process.env.HOST;
+const DATABASE = process.env.DATABASE;
+const PASSWORD = process.env.PASSWORD;
+const IMGBB_API_KEY = process.env.IMGBB_API_KEY;
 const IMGBB_URL = 'https://api.imgbb.com/1/upload';
 
 module.exports.USERNAME = USERNAME;
