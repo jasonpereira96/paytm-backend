@@ -1,11 +1,5 @@
 const { Client } = require('pg');
-
-const DB_PORT = 5432;
-const USERNAME = 'cxqyzdmbsgnzxx';
-const HOST = 'ec2-18-203-7-163.eu-west-1.compute.amazonaws.com';
-const DATABASE = 'd92ch17m0ic12f';
-const PASSWORD = 'd960a0ea5e09081b4d642bfb3164c685cfe10f7516086399f7f61271c280e85e';
-const SCHEMA = 'public';
+const { DB_PORT, USERNAME, HOST, DATABASE, PASSWORD, SCHEMA } = require('./../constants/constants');
 
 /**
  * 
@@ -100,12 +94,6 @@ function query(options) {
         });
     });
 }
-/*
-query({
-    queryString: `select * from ${SCHEMA}."Images";`
-}).then(data => {
-    console.log(data);
-});*/
 
 module.exports.makeEntry = makeEntry;
 module.exports.imageExists = imageExists;

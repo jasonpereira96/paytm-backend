@@ -20,6 +20,7 @@ const DATABASE = process.env.DATABASE;
 const PASSWORD = process.env.PASSWORD;
 const IMGBB_API_KEY = process.env.IMGBB_API_KEY;
 const IMGBB_URL = 'https://api.imgbb.com/1/upload';
+const SCHEMA = 'public';
 
 module.exports.USERNAME = USERNAME;
 module.exports.HOST = HOST;
@@ -27,5 +28,6 @@ module.exports.PASSWORD = PASSWORD;
 module.exports.DATABASE = DATABASE;
 module.exports.IMGBB_API_KEY = IMGBB_API_KEY;
 module.exports.IMGBB_URL = IMGBB_URL;
+module.exports.SCHEMA = SCHEMA;
 module.exports.measurements = measurements;
 module.exports.sizes = sizes;

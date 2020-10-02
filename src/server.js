@@ -35,8 +35,6 @@ app.post('/upload_test', function (request, response) {
         return res.status(400).send('No files were uploaded.');
     }
     let file = request.files.file;
-    console.log(file);
-    console.log(file.name); //'Webp.net-resizeimage.png'
     response.json({
         name: file.name,
         id: 5000
@@ -63,10 +61,6 @@ app.post('/upload', async function (request, response) {
         let response = await uploadImage(processedBuffer.toString('base64'));
         return response;
     }));
-
-    responses.forEach(data => {
-        console.log(data.url);
-    });
 
     var record = sizes.reduce((acc, size, index) => {
         acc[size] = responses[index].url;
