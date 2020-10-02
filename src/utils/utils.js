@@ -13,9 +13,9 @@ function processImage(buffer, size) {
 }
 
 function hash(buffer) {
-    const hash = crypto.createHash('sha256');
-    hash.update(buffer);
-    return hash.digest('hex');
+    let _hash = crypto.createHash('sha256');
+    _hash.update(buffer);
+    return _hash.digest('hex');
 }
 
 module.exports.processImage = processImage;
