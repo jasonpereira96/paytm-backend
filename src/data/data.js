@@ -15,7 +15,7 @@ async function imageExists(hash) {
 
 async function getImages() {
     let response = await query({
-        queryString: `select * from ${SCHEMA}."Images";`,
+        queryString: `select id, image_name from ${SCHEMA}."Images";`,
     });
     response.rows.forEach(row => {
         if (row.image_name) {
